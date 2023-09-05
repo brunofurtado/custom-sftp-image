@@ -22,10 +22,7 @@ RUN chown root. /home/sftpuser/ && chmod 755 /home/sftpuser/ && mkdir /home/sftp
 # Expose port
 EXPOSE 22
 
-USER root
 # Run SSH server
 CMD [ "/usr/sbin/sshd","-D" ]
 
 WORKDIR "/home/sftpuser/upload"
-
-USER sftpuser
