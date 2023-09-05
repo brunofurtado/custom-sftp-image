@@ -25,4 +25,6 @@ EXPOSE 22
 # Run SSH server
 CMD [ "/usr/sbin/sshd","-D" ]
 
+WORKDIR "/home/sftpuser/upload"
+
 USER sftpuser
